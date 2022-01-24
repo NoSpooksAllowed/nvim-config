@@ -7,7 +7,6 @@ Plug 'vim-airline/vim-airline-themes'
 
 "colorshemes
 Plug 'morhetz/gruvbox'
-call plug#end()
 
 "code completion
 Plug 'jiangmiao/auto-pairs'
@@ -16,6 +15,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ervandew/supertab'
 Plug 'StanAngeloff/php.vim'
 Plug 'mattn/emmet-vim'
+
+call plug#end()
 
 set number
 set expandtab

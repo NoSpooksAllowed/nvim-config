@@ -8,12 +8,16 @@ Plug 'vim-airline/vim-airline-themes'
 "colorshemes
 Plug 'morhetz/gruvbox'
 
+"utilities
+Plug 'sheerun/vim-polyglot'
+Plug 'ap/vim-css-color'
+
+
 "code completion
 Plug 'jiangmiao/auto-pairs'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ervandew/supertab'
-Plug 'StanAngeloff/php.vim'
 Plug 'mattn/emmet-vim'
 
 call plug#end()
@@ -35,6 +39,9 @@ set incsearch
 
 "mappings
 map <C-n> :NERDTreeToggle<CR>
+
+"auto format file
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 function! SynGroup()
     let l:s = synID(line('.'), col('.'), 1)
